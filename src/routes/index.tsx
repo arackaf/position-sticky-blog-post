@@ -1,5 +1,4 @@
-import { FC, PropsWithChildren, useState } from "react";
-import cn from "classnames";
+import { useState } from "react";
 
 import { FlexStickyDemoVersion1 } from "@/components/FlexStickyDemoVersion1";
 import { FlexStickyDemoVersion2 } from "@/components/FlexStickyDemoVersion2";
@@ -7,22 +6,9 @@ import { SimpleStickyDemo } from "@/components/SimpleStickyDemo";
 import { SimplyStickyDemoBreaking } from "@/components/SimplyStickyDemoBreaking";
 import { createFileRoute } from "@tanstack/react-router";
 import { FlexInFlexStickyDemoVersion1 } from "@/components/FlexInFlexStickyDemoVersion1";
+import { Button } from "@/components/Button";
 
 export const Route = createFileRoute("/")({ component: App });
-
-type ButtonProps = {
-  onClick: () => void;
-  active: boolean;
-};
-const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
-  const { onClick, children, active } = props;
-
-  return (
-    <button className={cn("border-2 border-gray-300 rounded-md p-2", active ? "bg-gray-400" : "")} onClick={onClick}>
-      {children}
-    </button>
-  );
-};
 
 function App() {
   const [version, setVersion] = useState(4);
