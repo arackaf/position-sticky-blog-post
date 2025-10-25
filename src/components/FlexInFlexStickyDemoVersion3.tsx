@@ -6,7 +6,7 @@ export const FlexInFlexStickyDemoVersion3 = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
   return (
-    <div className="flex border-2">
+    <div className="flex border-2 rounded-md">
       <div className="h-[500px] flex flex-1 gap-2 overflow-auto">
         <div className="self-start grid grid-rows-1 grid-cols-[250px_1fr] flex-1">
           {/* Side Navigation Pane */}
@@ -29,7 +29,12 @@ export const FlexInFlexStickyDemoVersion3 = () => {
               ))}
             </div>
             {/* Side drawer */}
-            <div className={cn("self-start sticky top-0 flex flex-col gap-8 overflow-auto ml-auto bg-red-300", showSideDrawer ? "w-[300px]" : "w-0")}>
+            <div
+              className={cn(
+                "max-h-[500px] self-start sticky top-0 flex flex-col gap-8 overflow-auto ml-auto bg-red-300",
+                showSideDrawer ? "w-[300px]" : "w-0"
+              )}
+            >
               <Button onClick={() => setShowSideDrawer(false)} className="self-start m-2">
                 Close Side Drawer
               </Button>
