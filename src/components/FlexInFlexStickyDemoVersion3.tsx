@@ -33,17 +33,10 @@ export const FlexInFlexStickyDemoVersion3 = () => {
               Close Side Drawer
             </Button>
             <span>This is some additional content</span>
-            <span>that the user</span>
-            <span>can show or hide</span>
-            <span>which provides</span>
-            <span>some additional context</span>
-            <span>to what's in the main content pane</span>
-            <span>etc</span>
-            <span>etc</span>
-            <span>etc</span>
-            <span>etc</span>
-            <span>etc</span>
-            <span>etc</span>
+            <span>that the user can show or hide</span>
+            {Array.from({ length: 10 }).map(() => (
+              <span>etc</span>
+            ))}
           </div>
         </div>
       </div>
