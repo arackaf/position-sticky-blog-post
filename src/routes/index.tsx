@@ -8,11 +8,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FlexInFlexStickyDemoVersion1 } from "@/components/FlexInFlexStickyDemoVersion1";
 import { Button } from "@/components/Button";
 import { FlexInFlexStickyDemoVersion2 } from "@/components/FlexInFlexStickyDemoVersion2";
+import { FlexInFlexStickyDemoVersion3 } from "@/components/FlexInFlexStickyDemoVersion3";
 
 export const Route = createFileRoute("/")({ component: App });
 
 function App() {
-  const [version, setVersion] = useState(4);
+  const [version, setVersion] = useState(6);
 
   return (
     <div className="flex flex-col gap-4 m-8">
@@ -35,6 +36,9 @@ function App() {
         <Button onClick={() => setVersion(5)} active={version === 5}>
           Flex in Flex v2
         </Button>
+        <Button onClick={() => setVersion(6)} active={version === 6}>
+          Flex in Flex v3
+        </Button>
       </div>
       {version === 0 && <SimpleStickyDemo />}
       {version === 1 && <SimplyStickyDemoBreaking />}
@@ -42,6 +46,7 @@ function App() {
       {version === 3 && <FlexStickyDemoVersion2 />}
       {version === 4 && <FlexInFlexStickyDemoVersion1 />}
       {version === 5 && <FlexInFlexStickyDemoVersion2 />}
+      {version === 6 && <FlexInFlexStickyDemoVersion3 />}
     </div>
   );
 }
