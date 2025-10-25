@@ -2,14 +2,14 @@ import { useState } from "react";
 import cn from "classnames";
 import { Button } from "./Button";
 
-export const FlexInFlexStickyDemoVersion1 = () => {
+export const FlexInFlexStickyDemoVersion2 = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
   return (
     <div className="h-[500px] flex gap-2 border-2 overflow-auto">
-      <div className="flex-1 grid grid-rows-1 grid-cols-[250px_1fr]">
+      <div className="flex-1 grid grid-rows-1 grid-cols-[250px_1fr] self-start">
         {/* Side Navigation Pane */}
-        <div className="sticky top-0 flex flex-col gap-8">
+        <div className="sticky top-0 flex flex-col gap-8 self-start">
           {Array.from({ length: 20 }).map((_, idx) => (
             <span>SIDE NAVIGATION {idx + 1}</span>
           ))}
@@ -26,7 +26,7 @@ export const FlexInFlexStickyDemoVersion1 = () => {
             ))}
           </div>
           {/* Side drawer */}
-          <div className={cn("sticky top-0 flex flex-col gap-8 overflow-auto ml-auto bg-red-300", showSideDrawer ? "w-[300px]" : "w-0")}>
+          <div className={cn("sticky top-0 flex flex-col self-start gap-8 overflow-auto ml-auto bg-red-300", showSideDrawer ? "w-[300px]" : "w-0")}>
             <Button onClick={() => setShowSideDrawer(false)} className="self-start m-2">
               Close Side Drawer
             </Button>

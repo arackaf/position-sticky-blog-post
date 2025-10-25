@@ -7,6 +7,7 @@ import { SimplyStickyDemoBreaking } from "@/components/SimplyStickyDemoBreaking"
 import { createFileRoute } from "@tanstack/react-router";
 import { FlexInFlexStickyDemoVersion1 } from "@/components/FlexInFlexStickyDemoVersion1";
 import { Button } from "@/components/Button";
+import { FlexInFlexStickyDemoVersion2 } from "@/components/FlexInFlexStickyDemoVersion2";
 
 export const Route = createFileRoute("/")({ component: App });
 
@@ -31,12 +32,16 @@ function App() {
         <Button onClick={() => setVersion(4)} active={version === 4}>
           Flex in Flex
         </Button>
+        <Button onClick={() => setVersion(5)} active={version === 5}>
+          Flex in Flex v2
+        </Button>
       </div>
       {version === 0 && <SimpleStickyDemo />}
       {version === 1 && <SimplyStickyDemoBreaking />}
       {version === 2 && <FlexStickyDemoVersion1 />}
       {version === 3 && <FlexStickyDemoVersion2 />}
       {version === 4 && <FlexInFlexStickyDemoVersion1 />}
+      {version === 5 && <FlexInFlexStickyDemoVersion2 />}
     </div>
   );
 }
