@@ -7,7 +7,7 @@ export const FlexInFlexStickyDemoVersion1 = () => {
 
   return (
     <div className="h-[500px] flex gap-2 border-2 overflow-auto">
-      <div className="flex-1 grid grid-rows-1 grid-cols-[250px_1fr]">
+      <div className="grid grid-rows-1 grid-cols-[250px_1fr] flex-1">
         {/* Side Navigation Pane */}
         <div className="sticky top-0 flex flex-col gap-8">
           {Array.from({ length: 20 }).map((_, idx) => (
@@ -18,10 +18,12 @@ export const FlexInFlexStickyDemoVersion1 = () => {
         {/* Main Content Pane */}
         <div className="flex flex-1 gap-2">
           <div className="flex flex-col flex-1 gap-2">
+            <Button className="self-start" onClick={() => setShowSideDrawer(true)}>
+              Show Side Drawer
+            </Button>
             {Array.from({ length: 100 }).map((_, idx) => (
               <div className="flex gap-2">
                 <span>Main Content line {idx}</span>
-                <Button onClick={() => setShowSideDrawer(true)}>Show Side Drawer</Button>
               </div>
             ))}
           </div>
