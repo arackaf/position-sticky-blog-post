@@ -1,4 +1,4 @@
-import { FlexStickyDemo } from "@/components/FlexStickyDemo";
+import { FlexStickyDemoVersion1 } from "@/components/FlexStickyDemoVersion1";
 import { SimpleStickyDemo } from "@/components/SimpleStickyDemo";
 import { SimplyStickyDemoBreaking } from "@/components/SimplyStickyDemoBreaking";
 import { createFileRoute } from "@tanstack/react-router";
@@ -10,7 +10,7 @@ function App() {
     <div className="m-8 flex flex-col gap-8">
       <SimpleStickyDemo />
       <SimplyStickyDemoBreaking />
-      <FlexStickyDemo />
+      <FlexStickyDemoVersion1 />
     </div>
   );
 }
