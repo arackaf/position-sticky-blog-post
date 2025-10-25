@@ -2,7 +2,9 @@ export const FlexInFlexStickyDemoVersion1 = () => {
   return (
     <div className="h-[500px] flex gap-2 border-2 overflow-hidden">
       {/* Side Navigation Pane */}
-      <div className="flex gap-2 w-56">SIDE NAVIGATION</div>
+      <div className="flex flex-col gap-8 w-56">
+        <span>SIDE NAVIGATION</span>
+      </div>
 
       {/* Main Content Pane */}
       <div className="flex flex-1 gap-2">
