@@ -9,6 +9,7 @@ import { FlexInFlexStickyDemoVersion1 } from "@/components/FlexInFlexStickyDemoV
 import { Button } from "@/components/Button";
 import { FlexInFlexStickyDemoVersion2 } from "@/components/FlexInFlexStickyDemoVersion2";
 import { FlexInFlexStickyDemoVersion3 } from "@/components/FlexInFlexStickyDemoVersion3";
+import { FlexDemo2 } from "@/components/FlexDemo2";
 
 export const Route = createFileRoute("/")({ component: App });
 
@@ -39,6 +40,9 @@ function App() {
         <Button onClick={() => setVersion(6)} active={version === 6}>
           Flex in Flex v3
         </Button>
+        <Button onClick={() => setVersion(7)} active={version === 7}>
+          Flex Demo 2
+        </Button>
       </div>
       {version === 0 && <SimpleStickyDemo />}
       {version === 1 && <SimplyStickyDemoBreaking />}
@@ -47,6 +51,7 @@ function App() {
       {version === 4 && <FlexInFlexStickyDemoVersion1 />}
       {version === 5 && <FlexInFlexStickyDemoVersion2 />}
       {version === 6 && <FlexInFlexStickyDemoVersion3 />}
+      {version === 7 && <FlexDemo2 />}
     </div>
   );
 }
