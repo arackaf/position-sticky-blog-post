@@ -9,7 +9,7 @@ export const FlexInFlexStickyDemoVersion1 = () => {
     <div className="h-[500px] flex gap-2 border-2 overflow-auto">
       <div className="grid grid-rows-1 grid-cols-[250px_1fr]">
         {/* Side Navigation Pane */}
-        <div className="sticky top-0 flex flex-col gap-8 w-56">
+        <div className="sticky top-0 flex flex-col gap-8">
           {Array.from({ length: 20 }).map((_, idx) => (
             <span>SIDE NAVIGATION {idx + 1}</span>
           ))}
